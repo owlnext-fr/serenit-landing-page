@@ -1,0 +1,70 @@
+/* =========================================================
+   Sérén'IT — Feuille de style principale
+   =========================================================
+   Approche : CSS vanilla + variables (custom properties).
+   Aucune dépendance, aucun build.
+
+   👉 À COMPLÉTER depuis le Figma :
+      https://www.figma.com/design/d37IQPmXwdApCN9lOUwHfb/S%C3%A9r%C3%A9n-It?node-id=185-2564
+
+   Centralisez TOUTES les valeurs de design (couleurs, typo,
+   espacements, rayons…) dans le bloc :root ci-dessous, puis
+   utilisez-les partout avec var(--nom-de-la-variable).
+   ========================================================= */
+
+:root {
+  /* --- Couleurs ---
+     Relevez les codes hex depuis Figma (panneau de droite > Fill).
+     Exemple de nommage : */
+  /* --color-primary:   #......;  (bleu marine du hero / footer) */
+  /* --color-accent:    #......;  (vert lime des boutons / accents) */
+  /* --color-text:      #......; */
+  /* --color-bg:        #......; */
+  /* --color-muted:     #......; */
+
+  /* --- Typographie ---
+     Repérez les polices et tailles dans Figma (panneau Text). */
+  /* --font-heading: '......', sans-serif; */
+  /* --font-body:    '......', sans-serif; */
+
+  /* --- Espacements ---
+     Réutilisez une échelle cohérente plutôt que des valeurs au pixel près. */
+  /* --space-sm:  8px; */
+  /* --space-md:  16px; */
+  /* --space-lg:  32px; */
+  /* --space-section: 96px; */
+
+  /* --- Rayons / ombres --- */
+  /* --radius-md: 12px; */
+}
+
+/* Base minimale (à étoffer librement) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+/* ----- Styles temporaires de la page "en construction" ----- */
+/* (à supprimer une fois la vraie landing en place) */
+.placeholder {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.ci-status {
+  font-size: 0.9rem;
+  color: #888;
+}
