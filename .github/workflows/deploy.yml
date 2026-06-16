@@ -7,6 +7,11 @@ on:
   # Permet aussi un lancement manuel depuis l'onglet "Actions".
   workflow_dispatch:
 
+# Force les actions JS à tourner sur Node.js 24 (les actions officielles
+# ci-dessous embarquent encore Node 20 ; cet opt-in anticipe la bascule).
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 # Permissions nécessaires au déploiement GitHub Pages.
 permissions:
   contents: read
