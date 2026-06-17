@@ -1,33 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sérén'IT — Landing page</title>
-    <meta
-      name="description"
-      content="Sérén'IT — Voyez clair, avancez serein. Plateforme de cybersécurité."
-    />
-    <!-- ⚠️ Chemins RELATIFS obligatoires (site servi sous /serenit-landing-page/ sur GitHub Pages) -->
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <main class="placeholder">
-      <h1>Sérén'IT — en construction 🚧</h1>
-      <p>Cette page est le point de départ. À vous de la construire !</p>
-      <p>
-        Maquette de référence :
-        <a
-          href="https://www.figma.com/design/d37IQPmXwdApCN9lOUwHfb/S%C3%A9r%C3%A9n-It?node-id=185-2564"
-          target="_blank"
-          rel="noopener"
-          >Figma — Sérén'IT</a
-        >
-      </p>
-      <p class="ci-status" id="ci-status">Vérification du JS…</p>
-    </main>
 
-    <!-- ⚠️ Chemin RELATIF ici aussi -->
-    <script src="./script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sérén'IT — Landing page</title>
+  <meta name="description" content="Sérén'IT — Voyez clair, avancez serein. Plateforme de cybersécurité." />
+  <!-- ⚠️ Chemins RELATIFS obligatoires (site servi sous /serenit-landing-page/ sur GitHub Pages) -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!--<h1>Sérén'IT — en construction 🚧</h1>
+    <p>Cette page est le point de départ. À vous de la construire !</p>
+    <p>
+      Maquette de référence :
+      <a href="https://www.figma.com/design/d37IQPmXwdApCN9lOUwHfb/S%C3%A9r%C3%A9n-It?node-id=185-2564" target="_blank"
+        rel="noopener">Figma — Sérén'IT</a>
+    </p>
+    <p class="ci-status" id="ci-status">Vérification du JS…</p> -->
+  <main>
+
+    <section class="hero">
+      <div class="hero_text">
+        <h1>Voyez clair, <br>avancez serein.</h1>
+        <p>Du flou à la clarté, sécurisez aujourd’hui pour grandir demain. Nous vous aidons à transformer votre
+          vulnérabilité en avantage stratégique</p>
+        <div class="hero__cta">
+          <a href="#" class="btn btn--primary">Évaluer mon risque</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="plateforme">
+      <h2>Quatre étapes, une seule plateforme</h2>
+      <div class="approche">
+        <h5>NOTRE APPROCHE</h5>
+        <div class="approche__cards">
+          <div class="approche__cards--top">
+            <div class="evaluer">
+              <div class="icon-evaluer-container">
+                <h5>01 - ÉVALUER</h5>
+                <img class="icon-evaluer" src="assets/images/évaluer.png" alt="" />
+              </div>
+              <h3>Mesurer votre préparation</h3>
+              <p>Un audit précis en langage métier. Une approche pratique et durable.</p>
+            </div>
+            <div class="bloquer">
+              <div class="icon-bloquer-container">
+                <h5>02 - BLOQUER</h5>
+                <img class="icon-bloquer" src="assets/images/bloquer.png" alt="" />
+              </div>
+              <h3>Protéger sereinement</h3>
+              <p>Assurez votre tranquillité d’esprit en anticipant les risques pour votre activité.</p>
+            </div>
+          </div>
+          <div class="approche__cards--bottom">
+            <div class="réagir">
+              <div class="icon-réagir-container">
+                <h5>03 - RÉAGIR</h5>
+                <img class="icon-réagir" src="assets/images/réagir.png" alt="" />
+              </div>
+              <h3>Déployer la réponse</h3>
+              <p>Activez les réflexes préparés pour rebondir plus vite.</p>
+            </div>
+            <div class="piloter">
+              <div class="icon-piloter-container">
+                <h5>04 - PILOTER</h5>
+                <img class="icon-piloter" src="assets/images/piloter.png" alt="" />
+              </div>
+              <h3>Agir avec clarté</h3>
+              <p>Un tableau de bord lisible, des indicateurs actionnables, avec l’esprit libre.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ⚠️ Chemin RELATIF ici aussi -->
+  <script src="./script.js"></script>
+</body>
+
 </html>
