@@ -33,13 +33,12 @@
   --font-heading: 'Momo display', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  --heading-4: 20px;
-  --heading-3: 22px;
-  --heading-2: 24px;
-  --heading-1: 28px;
-  --display-1: 64px;
-  --display-2: 36px;
-  --display-3: 32px;
+  --display-1: 64px; /*h1*/
+  --display-2: 36px; /*h2*/
+  --heading-1: 28px; /*h3*/
+  --heading-2: 24px; /*h4*/
+  --heading-3: 22px; /*h5*/
+  --heading-4: 20px; /*h6*/
   --body-large: 16px;
   --body-medium: 14px;
   --body-small: 12px;
@@ -205,4 +204,32 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
+}
+
+.solutions{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.solutions_text {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  
+}
+
+.solutions_text__description{
+  max-width: 680px;
+}
+
+.badge{
+  background-color: var(--color-border);
+  color: var(--color-blue-light);
+  font-size: var(--body-medium);
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 50px;
 }
