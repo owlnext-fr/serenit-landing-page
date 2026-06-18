@@ -22,14 +22,20 @@
 }
 
 :root {
-  /* --- Couleurs --- */
+ /* --- Couleurs --- */
   --color-blue-light:   #107B8B; 
   --color-border: rgba(16, 123, 139, 0.12); 
   --color-blue-dark: #001542;
   --color-background: #F8FBFF;
   --color-text: #1A1A1A;
   --color-accent: #70FF82;
+  --color-background-c: #E8FFEB;
+  --color-background-e: #EEF4FB;
+  --color-border-c: rgba(0, 209, 28, 0.12);
   --color-neutre-300-50: rgba(189, 196, 204, 0.50);
+  --color-text-description: #5D5D69 ;
+  --color-prix-c : #007510;
+  --color-accent-700: #00D11C;
 
   --font-heading: 'Momo display', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -119,8 +125,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 30px;
-  border: 3px solid var(--color-border);
+  padding: 16px 40px;
+  border: 2px solid var(--color-border);
   border-radius: 50px;
   position: sticky;
   top: 40px;
@@ -167,9 +173,9 @@ body {
 .navbar-actions .btn-login {
   color: var(--color-blue-light);
   font-family: var(--font-heading);
-  font-size: var(--body-medium);
-  font-weight: 200;
-  border: 3px solid var(--color-blue-light);
+  font-size: var(--body-large);
+  font-weight: 400;
+  border: 2px solid var(--color-blue-light);
   border-radius: 50px;
   padding: 8px 12px;
   transition: all 0.2s ease;
@@ -185,15 +191,20 @@ body {
 }
 
 .hero{
-  background: url("assets/images/Frame\ 4731.png") no-repeat center center;
+  background: url("assets/images/Frame\ 4738\ \(3\).png") no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   justify-content: center;
-  padding-left: 80px;
   margin-top: -100px;
+}
+
+.hero_text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
 }
 
 
@@ -203,6 +214,7 @@ body {
   background-color: var(--color-blue-light);
   font-family: var(--font-heading);
   font-size: var(--body-large);
+  font-weight: 400;
   padding: 12px 16px;
   border-radius: 22px;
   
@@ -211,15 +223,19 @@ body {
 .hero h1 {
   font-family: var(--font-heading);
   font-size: var(--display-1);
-  color: var(--color-blue-light);
-  margin-bottom: 40px;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.clair {
+  color: var(--color-accent-700);
 }
 
 .hero p {
   font-family: var(--font-body);
   font-size: var(--heading-4);
   color: var(--color-text);
-  max-width: 600px;
   margin-bottom: 52px;
 }
 
@@ -250,7 +266,7 @@ body {
   background-color: #ffffff;
   padding: 16px 16px 20px 16px;
   border-radius: 15px;
-  border: 3px solid var(--color-border);
+  border: 2px solid var(--color-border);
 }
 
 .icon-evaluer-container, .icon-bloquer-container {
@@ -276,6 +292,7 @@ body {
 .plateforme h2 {
   font-family: var(--font-heading);
   font-size: var(--display-2);
+  font-weight: 400;
   color: var(--color-text);
   margin-bottom: 40px;
 }
@@ -424,6 +441,7 @@ body {
 .clients h2{
   font-family: var(--font-heading);
   font-size: var(--display-2);
+  font-weight: 400;
   color: var(--color-text);
   margin-bottom: 40px;
 }
@@ -435,5 +453,5 @@ body {
   background-color: #ffffff;
   padding: 40px 25px;
   border-radius: 15px;
-  border: 3px solid var(--color-border);
+  border: 2px solid var(--color-border);
 }
