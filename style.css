@@ -221,9 +221,7 @@ body {
   
 }
 
-.solutions_text__description{
-  max-width: 680px;
-}
+
 
 .badge{
   background-color: var(--color-border);
