@@ -1,108 +1,213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sérén'IT — Landing page</title>
-  <meta name="description" content="Sérén'IT — Voyez clair, avancez serein. Plateforme de cybersécurité." />
-  <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sérén'IT — Landing page</title>
+    <meta
+      name="description"
+      content="Sérén'IT — Voyez clair, avancez serein. Plateforme de cybersécurité."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="fond-navbar">
+      <nav class="navbar">
+        <a href="#accueil" class="navbar-logo">
+          <img
+            src="./assets/images/logo.png"
+            alt="Logo Sérén'IT"
+            class="logo-img"
+          />
+        </a>
 
-  <div class="fond-navbar">
-    <nav class="navbar">
-      <a href="#accueil" class="navbar-logo">
-        <img src="./assets/images/logo.png" alt="Logo Sérén'IT" class="logo-img" />
-      </a>
+        <ul class="navbar-links">
+          <li><a href="#accueil" class="active">Accueil</a></li>
+          <li><a href="#plateforme">Plateforme</a></li>
+          <li><a href="#prix">Prix</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-      <ul class="navbar-links">
-        <li><a href="#accueil" class="active">Accueil</a></li> 
-        <li><a href="#plateforme">Plateforme</a></li>
-        <li><a href="#prix">Prix</a></li>
-        <li><a href="#clients">Clients</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <div class="navbar-actions">
-        <a href="#connexion" class="btn-login">Connexion</a>
-      </div>
-    </nav>
-  </div>
-
-  <main>
-
-    <section class="hero" id="accueil">
-      <div class="hero_text">
-        <h1>Voyez clair, <br>avancez serein.</h1>
-        <p>Du flou à la clarté, sécurisez aujourd’hui pour grandir demain. Nous vous aidons à transformer votre vulnérabilité en avantage stratégique</p>
-        <div class="hero__cta">
-          <a href="#" class="btn btn--primary">Évaluer mon risque</a>
+        <div class="navbar-actions">
+          <a href="#connexion" class="btn-login">Connexion</a>
         </div>
-      </div>
-    </section>
+      </nav>
+    </div>
 
-    <section class="plateforme" id="plateforme">
-      <h2>Quatre étapes, une seule plateforme</h2>
-      <div class="approche">
-        <h5>NOTRE APPROCHE</h5>
-        <div class="approche__cards">
-          
-          <div class="approche__cards--top">
-            <div class="evaluer">
-              <div class="icon-evaluer-container">
-                <h5>01 - ÉVALUER</h5>
-                <img class="icon-evaluer" src="assets/images/évaluer.png" alt="" />
+    <main>
+      <section class="hero" id="accueil">
+        <div class="hero_text">
+          <h1>Voyez <span class="clair">clair</span>, <br />avancez serein.</h1>
+          <p>Du flou à la clarté, sécurisez aujourd’hui pour grandir demain. <br />Nous
+            vous aidons à transformer votre vulnérabilité en avantage
+            stratégique.
+          </p>
+          <div class="hero__cta">
+            <a href="#" class="btn btn--primary">Évaluer mon risque</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="plateforme" id="plateforme">
+        <h2>Quatre étapes, une seule plateforme</h2>
+        <div class="approche">
+          <h5>NOTRE APPROCHE</h5>
+          <div class="approche__cards">
+            <div class="approche__cards--top">
+              <div class="evaluer">
+                <div class="icon-evaluer-container">
+                  <h5>01 - ÉVALUER</h5>
+                  <img
+                    class="icon-evaluer"
+                    src="assets/images/évaluer.png"
+                    alt=""
+                  />
+                </div>
+                <h3>Mesurer votre préparation</h3>
+                <p>
+                  Un audit précis en langage métier. Une approche pratique et
+                  durable.
+                </p>
               </div>
-              <h3>Mesurer votre préparation</h3>
-              <p>Un audit précis en langage métier. Une approche pratique et durable.</p>
+              <div class="bloquer">
+                <div class="icon-bloquer-container">
+                  <h5>02 - BLOQUER</h5>
+                  <img
+                    class="icon-bloquer"
+                    src="assets/images/bloquer.png"
+                    alt=""
+                  />
+                </div>
+                <h3>Protéger sereinement</h3>
+                <p>
+                  Assurez votre tranquillité d’esprit en anticipant les risques
+                  pour votre activité.
+                </p>
+              </div>
             </div>
-            <div class="bloquer">
-              <div class="icon-bloquer-container">
-                <h5>02 - BLOQUER</h5>
-                <img class="icon-bloquer" src="assets/images/bloquer.png" alt="" />
+
+            <div class="approche__cards--bottom">
+              <div class="réagir">
+                <div class="icon-réagir-container">
+                  <h5>03 - RÉAGIR</h5>
+                  <img
+                    class="icon-réagir"
+                    src="assets/images/réagir.png"
+                    alt=""
+                  />
+                </div>
+                <h3>Déployer la réponse</h3>
+                <p>Activez les réflexes préparés pour rebondir plus vite.</p>
               </div>
-              <h3>Protéger sereinement</h3>
-              <p>Assurez votre tranquillité d’esprit en anticipant les risques pour votre activité.</p>
+              <div class="piloter">
+                <div class="icon-piloter-container">
+                  <h5>04 - PILOTER</h5>
+                  <img
+                    class="icon-piloter"
+                    src="assets/images/piloter.png"
+                    alt=""
+                  />
+                </div>
+                <h3>Agir avec clarté</h3>
+                <p>
+                  Un tableau de bord lisible, des indicateurs actionnables, avec
+                  l’esprit libre.
+                </p>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="approche__cards--bottom">
-            <div class="réagir">
-              <div class="icon-réagir-container">
-                <h5>03 - RÉAGIR</h5>
-                <img class="icon-réagir" src="assets/images/réagir.png" alt="" />
-              </div>
-              <h3>Déployer la réponse</h3>
-              <p>Activez les réflexes préparés pour rebondir plus vite.</p>
-            </div>
-            <div class="piloter">
-              <div class="icon-piloter-container">
-                <h5>04 - PILOTER</h5>
-                <img class="icon-piloter" src="assets/images/piloter.png" alt="" />
-              </div>
-              <h3>Agir avec clarté</h3>
-              <p>Un tableau de bord lisible, des indicateurs actionnables, avec l’esprit libre.</p>
-            </div>
+        <div class="solutions">
+          <h5>NOS SOLUTIONS</h5>
+          <div class="solutions_text">
+            <h3>Clarté sur votre posture</h3>
+            <p class="solutions_text__description">
+              Comprendre simplement vos forces et vos axes d’amélioration. Nous
+              vous fournissons une <br />
+              feuille de route claire, sans jargon.
+            </p>
           </div>
+          <p class="badge">Test d’infrastructure</p>
+          <div class="points">
+            <div class="point_1"></div>
+            <div class="point_2"></div>
+            <div class="point_3"></div>
+            <div class="point_4"></div>
+          </div>
+        </div>
+      </section>
 
+      <section class="clients" id="clients">
+        <h2>Ils nous font confiance</h2>
+        <div class="clients_cards">
+          <div class="clients_card_1">
+            <div class="clients_card_1_noms">
+              <h3 class="nom_icone_1">T.D.</h3>
+              <div class="noms_text">
+                <h3>Thomas D.</h3>
+                <h6>DG d'une startup</h6>
+              </div>
+            </div>
+            <div>
+              <img src="assets/images/Star 1.png" alt="" />
+              <img src="assets/images/Star 1.png" alt="" />
+              <img src="assets/images/Star 1.png" alt="" />
+              <img src="assets/images/Star 1.png" alt="" />
+              <img src="assets/images/Star 1.png" alt="" />
+            </div>
+            <p>
+              La cybersécurité me faisait peur. Avec Sérén’IT, nous avons pu
+              évaluer notre niveau en quelques minutes et mettre en place les
+              bonnes barrières. Enfin une plateforme claire !
+            </p>
+          </div>
+          <div class="clients_card_2">
+            <div class="clients_card_2_noms">
+              <h3 class="nom_icone_2">S.L.</h3>
+              <div class="noms_text">
+                <h3>Sarah L.</h3>
+                <h6>DAF & Co-fondatrice</h6>
+              </div>
+            </div>
+            <div>
+              <img src="assets/images/Star 1.png" alt="" />
+              <img src="assets/images/Star 1.png" alt="" />
+              <img src="assets/images/Star 1.png" alt="" />
+              <img src="assets/images/Star 1.png" alt="" />
+              <img src="assets/images/Star 1.png" alt="" />
+            </div>
+            <p>
+              Le Pack Essentiel est parfait pour notre structure. Les rapports
+              sont simples à comprendre et l'accompagnement nous permet
+              d'avancer sereinement sans exploser notre budget.
+            </p>
+          </div>
+          <div class="clients_card_3">
+            <div class="clients_card_3_noms">
+              <h3 class="nom_icone_3">M.R.</h3>
+              <div class="noms_text">
+                <h3>Marc R.</h3>
+                <h6>DG & Co-fondateur</h6>
+              </div>
+            </div>
+            <div>
+              <img src="assets/images/Star 1.png" alt="" />
+              <img src="assets/images/Star 1.png" alt="" />
+              <img src="assets/images/Star 1.png" alt="" />
+              <img src="assets/images/Star 1.png" alt="" />
+              <img src="assets/images/Star 1.png" alt="" />
+            </div>
+            <p>
+              Une excellente visibilité sur notre posture de sécurité. La
+              plateforme va droit au but, les recommandations sont actionnables
+              immédiatement. Un must-have pour piloter son IT.
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div class="solutions">
-        <h5>NOS SOLUTIONS</h5>
-        <div class="solutions_text">
-          <h3>Clarté sur votre posture</h3>
-          <p class="solutions_text__description">Comprendre simplement vos forces et vos axes d’amélioration. Nous vous fournissons une <br> feuille de route claire, sans jargon.</p>
-        </div>
-        <p class="badge">Test d’infrastructure</p>
-        <div class="points">
-          <div class="point_1"></div>
-          <div class="point_2"></div>
-          <div class="point_3"></div>
-          <div class="point_4"></div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
 <section class="prix" id="prix">
   <div class="prix-texte">

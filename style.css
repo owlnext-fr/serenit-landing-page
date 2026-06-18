@@ -22,7 +22,7 @@
 }
 
 :root {
-  /* --- Couleurs --- */
+ /* --- Couleurs --- */
   --color-blue-light:   #107B8B; 
   --color-border: rgba(16, 123, 139, 0.12); 
   --color-blue-dark: #001542;
@@ -35,6 +35,7 @@
   --color-neutre-300-50: rgba(189, 196, 204, 0.50);
   --color-text-description: #5D5D69 ;
   --color-prix-c : #007510;
+  --color-accent-700: #00D11C;
 
   --font-heading: 'Momo display', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -124,8 +125,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 30px;
-  border: 3px solid var(--color-border);
+  padding: 16px 40px;
+  border: 2px solid var(--color-border);
   border-radius: 50px;
   position: sticky;
   top: 40px;
@@ -172,9 +173,9 @@ body {
 .navbar-actions .btn-login {
   color: var(--color-blue-light);
   font-family: var(--font-heading);
-  font-size: var(--body-medium);
-  font-weight: 200;
-  border: 3px solid var(--color-blue-light);
+  font-size: var(--body-large);
+  font-weight: 400;
+  border: 2px solid var(--color-blue-light);
   border-radius: 50px;
   padding: 8px 12px;
   transition: all 0.2s ease;
@@ -190,15 +191,20 @@ body {
 }
 
 .hero{
-  background: url("assets/images/Frame\ 4731.png") no-repeat center center;
+  background: url("assets/images/Frame\ 4738\ \(3\).png") no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   justify-content: center;
-  padding-left: 80px;
   margin-top: -100px;
+}
+
+.hero_text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
 }
 
 
@@ -208,6 +214,7 @@ body {
   background-color: var(--color-blue-light);
   font-family: var(--font-heading);
   font-size: var(--body-large);
+  font-weight: 400;
   padding: 12px 16px;
   border-radius: 22px;
   
@@ -216,21 +223,25 @@ body {
 .hero h1 {
   font-family: var(--font-heading);
   font-size: var(--display-1);
-  color: var(--color-blue-light);
-  margin-bottom: 40px;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.clair {
+  color: var(--color-accent-700);
 }
 
 .hero p {
   font-family: var(--font-body);
   font-size: var(--heading-4);
   color: var(--color-text);
-  max-width: 600px;
   margin-bottom: 52px;
 }
 
 .plateforme {
   text-align: center;
-  padding: 80px 0;
+  padding: 100px ;
 }
 
 .approche__cards--top {
@@ -255,7 +266,7 @@ body {
   background-color: #ffffff;
   padding: 16px 16px 20px 16px;
   border-radius: 15px;
-  border: 3px solid var(--color-border);
+  border: 2px solid var(--color-border);
 }
 
 .icon-evaluer-container, .icon-bloquer-container {
@@ -281,6 +292,7 @@ body {
 .plateforme h2 {
   font-family: var(--font-heading);
   font-size: var(--display-2);
+  font-weight: 400;
   color: var(--color-text);
   margin-bottom: 40px;
 }
@@ -330,6 +342,7 @@ body {
   font-weight: bold;
   padding: 6px 16px;
   border-radius: 50px;
+  margin-bottom: 30px !important;
 }
 
 .points {
@@ -595,4 +608,94 @@ body {
 .comparison-table td:nth-child(2),
 .comparison-table td:nth-child(3) {
   text-align: center;
+}
+.clients{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 350px;
+}
+
+.clients_cards {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+
+.clients_card_1_noms , .clients_card_2_noms , .clients_card_3_noms {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nom_icone_1{
+  background-color: var(--color-border);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.nom_icone_2{
+  background-color: var(--color-border);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.nom_icone_3{
+  background-color: var(--color-border);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.noms_text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.clients_cards h3 {
+  margin: 0px;
+  font-size: var(--heading-1);
+}
+
+.clients_cards h6 {
+  margin: 0px;
+  font-size: var(--body-heading-4);
+  font-weight: 400;
+}
+
+.clients_cards p {
+  margin: 0px;
+  font-size: var(--body-large);
+  font-weight: 400;
+}
+
+.clients h2{
+  font-family: var(--font-heading);
+  font-size: var(--display-2);
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 40px;
+}
+
+.clients_card_1 , .clients_card_2 , .clients_card_3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 40px 25px;
+  border-radius: 15px;
+  border: 2px solid var(--color-border);
 }
