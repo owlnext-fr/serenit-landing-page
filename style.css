@@ -11,15 +11,6 @@
    espacements, rayons…) dans le bloc :root ci-dessous, puis
    utilisez-les partout avec var(--nom-de-la-variable).
    ========================================================= */
-   @font-face {
-  font-family: 'Momo display';
-  src: url('assets/fonts/MomoTrustDisplay-Regular.ttf');
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('assets/fonts/Inter_18pt-Regular.ttf');
-}
-
 @font-face {
   font-family: 'Momo display';
   src: url('assets/fonts/MomoTrustDisplay-Regular.ttf');
@@ -32,8 +23,6 @@
 
 :root {
   /* --- Couleurs --- */
-  --color-blue-light:   #107B8B;
-  --color-border: rgba(16, 123, 139, 0.12);
   --color-blue-light:   #107B8B; 
   --color-border: rgba(16, 123, 139, 0.12); 
   --color-blue-dark: #001542;
@@ -110,13 +99,6 @@ body {
   color: #F8FBFF;
 }
 
-
-body{
-  background-color: var(--color-background); 
-    font-family: var(--font-body);  
-    color: var(--color-text);
-}
-
 /*Dino Navbar */
 
 .fond-navbar {
@@ -128,6 +110,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
+  
 }
 
 .navbar {
@@ -135,7 +119,6 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2px;
   height: 60px;
   border: 3px solid var(--color-border);
   border-radius: 50px;
@@ -156,7 +139,7 @@ body{
 .navbar a {
   text-decoration: none;
   color: inherit;
-  margin: 0 30px;
+  margin: 0 12px;
   font-size: var(--body-medium);
 }
 
@@ -313,6 +296,7 @@ body{
   display: flex;
   flex-direction: column;
   gap: 50px;
+  margin-bottom: 50px;
 }
 
 .solutions{
@@ -333,7 +317,6 @@ body{
   margin-bottom: 20px;
   
 }
-
 
 .badge{
   background-color: var(--color-border);
