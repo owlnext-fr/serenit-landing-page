@@ -29,7 +29,12 @@
   --color-background: #F8FBFF;
   --color-text: #1A1A1A;
   --color-accent: #70FF82;
+  --color-background-c: #E8FFEB;
+  --color-background-e: #EEF4FB;
+  --color-border-c: rgba(0, 209, 28, 0.12);
   --color-neutre-300-50: rgba(189, 196, 204, 0.50);
+  --color-text-description: #5D5D69 ;
+  --color-prix-c : #007510;
 
   --font-heading: 'Momo display', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -119,7 +124,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  padding: 16px 30px;
   border: 3px solid var(--color-border);
   border-radius: 50px;
   position: sticky;
@@ -345,4 +350,249 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 30px;
+}
+
+
+/* Section Prix Dino */
+
+.prix {
+  padding: 95px 0 20px 0 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.prix-texte {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.prix-texte h2 {
+  font-family: var(--font-heading);
+  font-size: var(--display-2);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.form-txt {
+  font-family: var(--font-body);
+  font-size: var(--heading-3);
+  color: var(--color-blue-light);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.prix-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; 
+  gap: 117px;
+}
+
+.card-free, .card-essentiel, .card-croissance {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 2px solid var(--color-neutre-300-50); 
+  box-shadow: 0 4px 20px rgba(16, 123, 139, 0.03);
+}
+
+.card-free {
+  border: 2px solid var(--color-neutre-300-50);
+}
+
+.card-essentiel {
+  border: 2px solid var(--color-border); 
+  background: linear-gradient(var(--color-background-e), white);
+  background-clip: padding-box;
+}
+
+.card-croissance {
+  border: 2px solid var(--color-border-c); 
+  background: linear-gradient(var(--color-background-c), white);
+  background-clip: padding-box;
+}
+
+.prix-cards h3 {
+  font-family: var(--font-body);
+  font-size: var(--heading-1);
+  color: var(--color-text);
+  margin: 0 0 12px 0;
+}
+
+.card-description {
+  font-size: var(--heading-4);
+  color: var(--color-text-description);
+  margin: 0 0 24px 0;
+  line-height: 1.4;
+  min-height: 44px; 
+  
+}
+
+.card-essentiel .card-description {
+  white-space: nowrap;
+}
+
+.card-essentiel .prix-somme {
+  font-size: var(--heading-1);
+  font-weight: bold;
+  color: var(--color-blue-light);
+  font-family: var(--font-body);
+  letter-spacing:1px;
+}
+
+.card-croissance .prix-somme {
+  font-size: var(--heading-1);
+  font-weight: bold;
+  color: var(--color-prix-c);
+  font-family: var(--font-body);
+  letter-spacing:1px;
+}
+
+.prix-periode {
+  font-family: var(--font-body);
+  font-size: var(--heading-4);
+  color: var(--color-text-description);
+}
+
+.card-info {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  white-space: nowrap;
+
+}
+
+.card-info li {
+  font-family: var(--font-body);
+  font-size: var(--body-large);
+  color: var(--color-text-description);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 2px;
+}
+
+.card-prix {
+  margin-bottom: 32px;
+}
+
+.btn-card {
+  text-decoration: none;
+  text-align: center;
+  margin-top: auto;
+}
+
+.card-croissance .btn-card {
+  color: var(--color-prix-c);
+  font-family: var(--font-heading);
+  font-size: var(--body-large);
+  border: 2px solid var(--color-prix-c);
+  padding: 12px 16px;
+  border-radius: 22px;
+  display: inline-block;
+  width: 100%;
+}
+
+.card-essentiel .btn-card {
+  color: var(--color-blue-light);
+  font-family: var(--font-heading);
+  font-size: var(--body-large);
+  border: 2px solid var(--color-blue-light);
+  padding: 12px 16px;
+  border-radius: 22px;
+  display: inline-block;
+  width: 100%;
+}
+
+.card-free .btn-card {
+  color: var(--color-text-description);
+  font-family: var(--font-heading);
+  font-size: var(--body-large);
+  border: 2px solid var(--color-text-description);
+  padding: 12px 16px;
+  border-radius: 22px;
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+/* Tableau comparaison Dino */
+
+
+.comparison-section {
+  width: 100%;
+  max-width: 940px;
+  margin: -30px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.table-container {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1.5px solid var(--color-border); 
+  border-radius: 25px;         
+  padding: 40px 48px;     
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
+}
+
+/* On ajoute explicitement collapse pour éviter les écarts de bordures */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse; 
+}
+
+.comparison-table th {
+  padding-bottom: 24px;
+  font-family: var(--font-body);
+  font-size: var(--heading-4);
+  font-weight: 400;
+  color: #1A1A1A;
+  border-bottom: 1.5px solid var(--color-border); 
+}
+
+.col-fonct {
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.col-abo {  
+  text-align: center;
+  width: 25%;
+}
+
+.comparison-table td {
+  padding: 20px 0;
+  font-family: var(--font-body);
+  font-size: var(--body-large);
+  color: #1A1A1A;
+}
+
+.icon-valider-table, .rien {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.temps {
+  font-weight: 400;
+  color: #1A1A1A;
+}
+.comparison-table td:nth-child(2),
+.comparison-table td:nth-child(3) {
+  text-align: center;
 }
