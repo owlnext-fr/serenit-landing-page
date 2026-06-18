@@ -11,29 +11,18 @@
    espacements, rayons…) dans le bloc :root ci-dessous, puis
    utilisez-les partout avec var(--nom-de-la-variable).
    ========================================================= */
-   @font-face {
+@font-face {
   font-family: 'Momo display';
   src: url('assets/fonts/MomoTrustDisplay-Regular.ttf');
 }
+
 @font-face {
   font-family: 'Inter';
   src: url('assets/fonts/Inter_18pt-Regular.ttf');
 }
 
-@font-face {
-  font-family: 'Momo display';
-  src: url('assets/fonts/MomoTrustDisplay-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('assets/fonts/Inter-VariableFont_opsz\,wght.ttf');
-}
-
 :root {
   /* --- Couleurs --- */
-  --color-blue-light:   #107B8B;
-  --color-border: rgba(16, 123, 139, 0.12);
   --color-blue-light:   #107B8B; 
   --color-border: rgba(16, 123, 139, 0.12); 
   --color-blue-dark: #001542;
@@ -109,13 +98,6 @@ body {
   color: #F8FBFF;
 }
 
-
-body{
-  background-color: var(--color-background); 
-    font-family: var(--font-body);  
-    color: var(--color-text);
-}
-
 /*Dino Navbar */
 
 .fond-navbar {
@@ -127,6 +109,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
+  
 }
 
 .navbar {
@@ -134,7 +118,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2px;
+  padding: 0 24px;
   height: 60px;
   border: 3px solid var(--color-border);
   border-radius: 50px;
@@ -209,6 +193,7 @@ body{
   text-align: left;
   justify-content: center;
   padding-left: 80px;
+  margin-top: -100px;
 }
 
 
@@ -327,8 +312,6 @@ body{
   gap: 22px;
   
 }
-
-
 
 .badge{
   background-color: var(--color-border);
