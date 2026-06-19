@@ -305,6 +305,9 @@ body {
   font-size: var(--heading-3);
   color: var(--color-blue-light);
   margin: 0px;
+  opacity: 1 !important;
+  transform: none !important;
+
 }
 
 .plateforme h2 {
@@ -333,6 +336,7 @@ body {
   gap: 50px;
   margin-bottom: 50px;
 }
+
 
 /* Section Solution (dans platforme) */
 
@@ -1070,7 +1074,7 @@ footer p {
 .approche__cards--bottom.plateforme-visible,
 .solutions.plateforme-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) ;
 }
 
 .solutions_bloc.active {
