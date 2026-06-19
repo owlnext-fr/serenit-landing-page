@@ -557,7 +557,7 @@ body {
 .table-container {
   width: 100%;
   background-color: #ffffff;
-  border: 1.5px solid var(--color-border); 
+  border: 2px solid var(--color-border); 
   border-radius: 25px;         
   padding: 40px 48px;     
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
@@ -575,7 +575,7 @@ body {
   font-size: var(--heading-4);
   font-weight: 400;
   color: #1A1A1A;
-  border-bottom: 1.5px solid var(--color-border); 
+  border-bottom: 2px solid var(--color-border); 
 }
 
 .col-fonct {
