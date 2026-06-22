@@ -15,6 +15,38 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Gère le changement de couleur automatique des liens de la navbar (Scrollspy) lors du défilement
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section, footer");
+  const liensNav = document.querySelectorAll(".navbar-links a");
+
+  const optionRadar = {
+    root: null,
+    rootMargin: "-30% 0px -60% 0px"
+  };
+
+  const espionScroll = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const idSection = entry.target.getAttribute("id");
+
+        liensNav.forEach((lien) => {
+          lien.classList.remove("active");
+          if (lien.getAttribute("href") === `#${idSection}`) {
+            lien.classList.add("active");
+          }
+        });
+      }
+    });
+  }, optionRadar);
+
+  sections.forEach((section) => {
+    if (section.getAttribute("id")) {
+      espionScroll.observe(section);
+    }
+  });
+});
+
 // Animation d'apparition du hero au chargement
 document.addEventListener("DOMContentLoaded", () => {
   const titreAccueil = document.querySelector(".hero h1");
@@ -143,6 +175,7 @@ const grillePrix = document.querySelector(".prix-cards");
     observateur.observe(grillePrix);
   }
 
+// Animation d'apparition du tableau comparatif des prix au défilement
   const sectionComparatif = document.querySelector(".comparison-section");
 
   if (sectionComparatif) {
@@ -158,6 +191,43 @@ const grillePrix = document.querySelector(".prix-cards");
     });
 
     observateurTableau.observe(sectionComparatif);
+  }
+
+// Animation d'apparition du titre de la section clients au défilement
+  const titreClients = document.querySelector(".clients h2");
+
+if (titreClients) {
+  const obsTitreClients = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        obsTitreClients.unobserve(entry.target);
+      }
+    });
+  }, { 
+    threshold: 0.2 
+  });
+  
+  obsTitreClients.observe(titreClients);
+}
+
+// Animation d'apparition des cartes avis clients au défilement
+  const sectionClients = document.querySelector(".clients");
+  const conteneurAAnimer = document.querySelector(".clients_cards");
+
+  if (sectionClients && conteneurAAnimer) {
+    const observateurClients = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          conteneurAAnimer.classList.add("visible");
+          observateurClients.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    observateurClients.observe(sectionClients);
   }
 
   // Carrousel des avis clients (flèches gauche/droite + gestion du scroll)
@@ -229,3 +299,4 @@ if (sectionFooter) {
 
   observerFooter.observe(sectionFooter);
 }
+

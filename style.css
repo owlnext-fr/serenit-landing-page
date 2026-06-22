@@ -113,6 +113,11 @@ body {
   color: #F8FBFF;
 }
 
+section {
+  scroll-margin-top: 50px;
+}
+
+
 /*Dino Navbar */
 
 /*  Navbar  */
@@ -150,6 +155,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 
 .navbar a {
   text-decoration: none;
@@ -354,6 +360,7 @@ body {
 /*  Section Platforme  */
 .plateforme {
   text-align: center;
+  padding : 100px 0 20px;
   
 }
 
@@ -541,7 +548,7 @@ body {
 
 /* Section Prix */
 .prix {
-  padding: 95px 0 20px 0 ;
+  padding: 100px 0 20px 0 ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -561,6 +568,7 @@ body {
   font-weight: 400;
   color: var(--color-text);
   margin: 0;
+  margin: 30px 0 40px;
 }
 
 .form-txt {
@@ -1154,7 +1162,7 @@ footer .navigation{
   display: none;
 }
 
-/* On ajoute explicitement collapse pour éviter les écarts de bordures */
+
 .comparison-table {
   width: 100%;
   border-collapse: collapse; 
@@ -1221,12 +1229,16 @@ footer .navigation{
 
 .clients_cards {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; 
   gap: 30px;
-  overflow-x: hidden;
+  overflow-x: hidden; 
   scroll-behavior: smooth;
   width: 100%;
   padding: 20px 0;
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+  will-change: opacity, transform;
 }
 
 
@@ -1301,6 +1313,7 @@ footer .navigation{
   margin: 0px;
   font-size: var(--heading-1);
   
+  
 }
 
 .clients_cards h6 {
@@ -1322,7 +1335,12 @@ footer .navigation{
   color: var(--color-text);
   margin-bottom: 40px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
 }
+
 
 .clients a {
   text-decoration: none;
@@ -1653,4 +1671,20 @@ footer p {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.15s;
+}
+
+.clients_cards.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.clients h2.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.navbar-links a.active {
+  color: var(--color-blue-light) !important;        
+  font-weight: 700;     
+  border-bottom: 2px solid var(--color-blue-light) !important;
 }
