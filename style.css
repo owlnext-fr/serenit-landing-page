@@ -206,9 +206,7 @@ section {
   display: none;
 }
 
-.btn-login:hover {
-  background-color: var(--color-blue-dark);
-}
+
 
 .btn-login:hover {
   background-color: var(--color-blue-light);
@@ -218,6 +216,87 @@ section {
 .logo-img {
   height: 32px; 
 }
+
+.panel_menu{
+  display: none !important;
+}
+
+.panel_menu{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+  gap: 50px;
+  padding: 32px 30px;
+}
+
+.panel_heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-background);
+}
+
+.panel_menu h2 , .panel_menu span{
+  font-size: var(--display-2-mobile);
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: var(--color-blue-light);
+  margin: 10px 0;
+}
+
+.panel_menu span{
+  border: 2px solid var(--color-blue-light);
+  border-radius: 40px;
+  padding: 0px 13px;
+  transition: all 0.2s ease;
+}
+
+.panel_menu span:hover{
+  background-color: var(--color-blue-light);
+  color: var(--color-background);
+}
+
+.panel-links {
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.panel-links a{
+  text-decoration: none;
+  color: var(--color-blue-light);
+  font-size: var(--heading-3);
+  font-weight: bold;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent; 
+  transition: all 0.2s ease; 
+}
+
+.panel_menu .btn-login {
+  color: var(--color-background);
+  font-family: var(--font-heading);
+  font-size: var(--body-large);
+  font-weight: 400;
+  background-color: var(--color-blue-light);
+  border-radius: 50px;
+  padding: 10px 16px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.panel-links a:hover {
+  border-bottom: 2px solid var(--color-blue-light); 
+}
+
+.panel_menu .btn-login:hover {
+  background-color: var(--color-hover-primary);
+}
+
 
 
 /*  Hero  */
@@ -517,7 +596,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: stretch; 
-  gap: 117px;
+  gap: 50px;
 }
 
 @media (max-width: 455px) {
@@ -529,6 +608,8 @@ section {
   color: var(--color-text);
   margin-bottom: 20px;
 }
+
+
 
 .plateforme h2 {
   font-family: var(--font-heading);
@@ -601,7 +682,15 @@ section {
 
 .hero{
   background: var(--color-background);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 0 20px;
 }
+
 
 .approche__cards--top {
   display: flex;
@@ -626,6 +715,9 @@ section {
 
 @media (max-width: 768px) {
   
+.hero{
+  padding: 0 20px;
+}
 
 .approche__cards--top {
   display: flex;
@@ -682,25 +774,9 @@ section {
   margin: 0 20px;
 }
 
-.clients_cards {
-  display: flex;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 20px !important;
-  flex-direction: column;
-}
 
-.clients a {
-  display: block !important;
-}
 
-.fleche_client_gauche{
-  display: none !important;
-}
 
-.fleche_client_droite{
-  display: none !important;
-}
 
 .footer_text{
   display: flex;
@@ -780,6 +856,13 @@ section {
   margin: 0;
 }
 
+.card-free {
+  min-height: auto !important;
+}
+
+.card-free p{
+  margin: 0 0 40px 0;
+}
 }
 
 @media (max-width: 960px){
@@ -804,18 +887,32 @@ section {
   padding: 16px 20px !important;
 }
 
+.clients a {
+  display: block !important;
+}
+
+.fleche_client_gauche{
+  display: none !important;
+}
+
+.fleche_client_droite{
+  display: none !important;
+}
+
+.clients_cards {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 20px !important;
+  flex-direction: column;
+}
+
 
 }
 
 
 @media (max-width: 1440px) {
-  .prix-cards {
-  display: flex;
-  justify-content: center;
-  align-items: stretch; 
-  gap: 41px;
-  
-}
+
 
 footer .navigation{
   display: none;
@@ -839,7 +936,7 @@ footer .navigation{
   display: none !important;
 }
 
-.clients_cards {
+.clients_cards{
   justify-content: center !important;
 }
 
@@ -878,6 +975,8 @@ footer .navigation{
   flex-direction: column;
   flex: 1;
 }
+
+
 
 }
 
@@ -1090,7 +1189,7 @@ footer .navigation{
   letter-spacing: 0.5px;
 }
 
-.col-abo {  
+.col-abo { 
   text-align: center;
   width: 25%;
 }
