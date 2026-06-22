@@ -97,14 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
   let indexActuel = 0;
 
-  function gererFleches() {
-    if (boutonGauche) {
-      boutonGauche.disabled = indexActuel === 0;
-    }
-    if (boutonDroite) {
-      boutonDroite.disabled = indexActuel === listeSolutions.length - 1;
-    }
-  }
 
   function changerSolution(nouvelIndex) {
     listeSolutions[indexActuel].classList.remove("active");
@@ -114,8 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     listeSolutions[indexActuel].classList.add("active");
     listePoints[indexActuel].classList.add("point_active");
-
-    gererFleches();
   }
 
   listePoints.forEach((point, index) => {
@@ -126,23 +116,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (boutonDroite) {
     boutonDroite.addEventListener("click", () => {
-      if (indexActuel < listeSolutions.length - 1) {
-        changerSolution(indexActuel + 1);
-      }
+      const prochainIndex = indexActuel === listeSolutions.length - 1 ? 0 : indexActuel + 1;
+      changerSolution(prochainIndex);
     });
   }
 
   if (boutonGauche) {
     boutonGauche.addEventListener("click", () => {
-      if (indexActuel > 0) {
-        changerSolution(indexActuel - 1);
-      }
+      const prochainIndex = indexActuel === 0 ? listeSolutions.length - 1 : indexActuel - 1;
+      changerSolution(prochainIndex);
     });
   }
-
-  gererFleches();
 });
-
 
 // Animation au scroll de la section Prix (titre, cartes, tableau comparatif)
 const prixTexte = document.querySelector(".prix-texte");

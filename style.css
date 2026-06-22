@@ -476,14 +476,19 @@ section {
 }
 
 .fleche {
-  background: none;
-  border: none;
   font-size: 24px;
   color: var(--color-blue-light);
   cursor: pointer;
-  padding: 10px;
+  padding: auto;
   transition: transform 0.2s ease;
   margin-bottom: 40px;
+  font-size: 24px;
+  color: var(--color-blue-light);
+  border-radius: 50%;
+  border: 0.01px solid var(--color-border);
+  background-color: var(--color-border);
+  width: 30px;
+  height: 30px;
 }
 
 .fleche:hover {
@@ -1259,8 +1264,6 @@ footer .navigation{
   position: absolute;
   top: 58%;
   transform: translateY(-50%);
-  background: none;
-  border: none;
   font-size: 24px;
   color: var(--color-blue-light);
   cursor: pointer;
