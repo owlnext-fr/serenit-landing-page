@@ -225,7 +225,8 @@ if (titreClients) {
     
     if (boutonClientGauche) boutonClientGauche.disabled = true;
 
-    const largeurDecalage = cartesClients[0].offsetWidth + 30;
+  const largeurUneCarte = cartesClients[0].offsetWidth + 30;
+  const largeurDecalage = largeurUneCarte * 3;
 
     if (boutonClientDroite) {
       boutonClientDroite.addEventListener("click", () => {
