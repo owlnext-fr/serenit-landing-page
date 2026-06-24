@@ -289,8 +289,8 @@ if (sectionFooter) {
 
 // Affichage/Disparition des tableaux de comparaison pour la version mobile (tableau croissance)
 function afficherCroissance() {
-  const tableEssentiel = document.querySelector('.table-container_essentiel');
-  const tableCroissance = document.querySelector('.table-container_croissance');
+  const tableEssentiel = document.querySelector('.container_essentiel');
+  const tableCroissance = document.querySelector('.container_croissance');
   
   if (tableEssentiel && tableCroissance) {
     tableEssentiel.classList.remove('active-tab');
@@ -300,8 +300,8 @@ function afficherCroissance() {
 
 // (tableau essentiel)
 function afficherEssentiel() {
-  const tableEssentiel = document.querySelector('.table-container_essentiel');
-  const tableCroissance = document.querySelector('.table-container_croissance');
+  const tableEssentiel = document.querySelector('.container_essentiel');
+  const tableCroissance = document.querySelector('.container_croissance');
   
   if (tableEssentiel && tableCroissance) {
     tableCroissance.classList.remove('active-tab');
