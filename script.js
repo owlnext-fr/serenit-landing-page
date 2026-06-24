@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const optionRadar = {
     root: null,
-    rootMargin: "-30% 0px -60% 0px"
+    rootMargin: "-20% 0px -10% 0px"
   };
 
   const espionScroll = new IntersectionObserver((entries) => {
@@ -225,7 +225,8 @@ if (titreClients) {
     
     if (boutonClientGauche) boutonClientGauche.disabled = true;
 
-    const largeurDecalage = cartesClients[0].offsetWidth + 30;
+  const largeurUneCarte = cartesClients[0].offsetWidth + 30;
+  const largeurDecalage = largeurUneCarte * 3;
 
     if (boutonClientDroite) {
       boutonClientDroite.addEventListener("click", () => {
@@ -284,4 +285,36 @@ if (sectionFooter) {
 
   observerFooter.observe(sectionFooter);
 }
+
+
+// Affichage/Disparition des tableaux de comparaison pour la version mobile (tableau croissance)
+function afficherCroissance() {
+  const tableEssentiel = document.querySelector('.table-container_essentiel');
+  const tableCroissance = document.querySelector('.table-container_croissance');
+  
+  if (tableEssentiel && tableCroissance) {
+    tableEssentiel.classList.remove('active-tab');
+    tableCroissance.classList.add('active-tab');
+  }
+}
+
+// (tableau essentiel)
+function afficherEssentiel() {
+  const tableEssentiel = document.querySelector('.table-container_essentiel');
+  const tableCroissance = document.querySelector('.table-container_croissance');
+  
+  if (tableEssentiel && tableCroissance) {
+    tableCroissance.classList.remove('active-tab');
+    tableEssentiel.classList.add('active-tab');
+  }
+}
+
+// Apparition au clique du menu 
+function gererMenu() {
+  const menu = document.querySelector('.panel_menu');
+  if (menu) {
+    menu.classList.toggle('open');
+  }
+}
+
 
