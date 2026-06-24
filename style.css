@@ -167,9 +167,9 @@ section {
 
 .navbar-links {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   list-style: none;
-  margin: 0;
+  margin-left: 215px;
   padding: 0;
 }
 
@@ -766,25 +766,7 @@ section {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
 }
 
-.table-container_essentiel{
-  background-color: #ffffff;
-  border: 1.5px solid var(--color-border); 
-  border-radius: 25px;         
-  padding: 32px 24px;     
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
-  max-width: 400px;
-  display: none;
-}
 
-.table-container_croissance{
-  background-color: #ffffff;
-  border: 1.5px solid var(--color-border); 
-  border-radius: 25px;         
-  padding: 32px 24px;     
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
-  max-width: 400px;
-  display: none;
-}
 
 .comparison-table {
   width: 100%;
@@ -843,7 +825,7 @@ section {
   border: 2px solid var(--color-border);
   border-radius: 25px;
   margin: 0 20px;
-  display: none;
+  display: none !important;
 }
 
 .container_croissance h6{
@@ -1609,6 +1591,10 @@ body:has(.open)::before {
 
 /* Responsive 768px */
 @media (max-width: 768px) {
+.navbar-actions .btn.btn--primary{
+  display: none;
+}
+
 .hero{
   padding: 0 20px;
 }
@@ -1703,10 +1689,6 @@ body:has(.open)::before {
   padding: 20px !important;
 }
 
-.clients_card_3 , .clients_card_4{
-  display: none !important;
-}
-
 .action {
   display: flex;
   flex-direction: column;
@@ -1748,7 +1730,7 @@ body:has(.open)::before {
 }
 
 .navbar-links{
-  display: none;
+  display: none !important;
 }
 
 .navbar-actions .btn-login {
@@ -1783,8 +1765,12 @@ body:has(.open)::before {
   flex-direction: column;
 }
 
+.clients_card_3 , .clients_card_4{
+  display: none !important;
+}
+
 .table-container{
-  display: none;
+  display: none !important;
 }
 
 .container_essentiel {
@@ -1815,8 +1801,17 @@ body:has(.open)::before {
   cursor: pointer;
 }
 
-.container_essentiel.active-tab,
-.container_croissance.active-tab {
+div.container_essentiel{
+  display: none !important;
+}
+div.container_croissance {
+  display: none !important; 
+}
+
+div.container_essentiel.active-tab{
+  display: block !important;
+}
+div.container_croissance.active-tab {
   display: block !important;
 }
 
@@ -1828,6 +1823,18 @@ body:has(.open)::before {
 
 /* Responsive 1440px */
 @media (max-width: 1439px) {
+.navbar-actions .btn.btn--primary{
+  display: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+}
+
 footer .navigation{
   display: none;
 }
@@ -1903,6 +1910,5 @@ footer .navigation{
   margin: 0 100px;
   z-index: 1;
 }
-
 
 }
