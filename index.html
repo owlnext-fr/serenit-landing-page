@@ -32,7 +32,7 @@
 
         <div class="navbar-actions">
           <a href="#connexion" class="btn-login">Connexion</a>
-          <a href="#menu" class="btn-menu"><img src="assets/images/Vector.png"> </a>
+          <a href="#menu" class="btn-menu " onclick="gererMenu()"><img src="assets/images/Vector.png"> </a>
         </div>
       </nav>
       
@@ -41,14 +41,14 @@
       <div class="panel_menu">
         <div class="panel_heading">
         <h2>MENU</h2>
-        <span>&#10005;</span>
+        <span onclick="gererMenu()">&#10005;</span>
         </div>
         <ul class="panel-links">
-          <li><a href="#accueil" >Accueil</a></li>
-          <li><a href="#plateforme">Plateforme</a></li>
-          <li><a href="#prix">Prix</a></li>
-          <li><a href="#clients">Clients</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#accueil" onclick="gererMenu()">Accueil</a></li>
+          <li><a href="#plateforme"onclick="gererMenu()">Plateforme</a></li>
+          <li><a href="#prix"onclick="gererMenu()">Prix</a></li>
+          <li><a href="#clients"onclick="gererMenu()">Clients</a></li>
+          <li><a href="#contact"onclick="gererMenu()">Contact</a></li>
         </ul>
         <div class="panel_cta">
         <a href="#connexion" class="btn-login">Connexion</a>
@@ -288,13 +288,13 @@
             </table>
           </div>
 
-          <div class="table-container_essentiel">
+          <div class="table-container_essentiel active-tab">
             <table class="comparison-table">
               <thead>
                 <tr>
                   
                   <th class="col-abo">Essentiel</th>
-                  <th class="col-abo">Croissance</th>
+                  <th class="col-abo" onclick="afficherCroissance()">Croissance</th>
                 </tr>
               </thead>
               <tbody>
@@ -322,11 +322,11 @@
             </table>
           </div>
 
-          <div class="table-container_croissance">
+          <div class="table-container_croissance ">
             <table class="comparison-table">
               <thead>
                 <tr>
-                  <th class="col-abo">Essentiel</th>
+                  <th class="col-abo" onclick="afficherEssentiel()">Essentiel</th>
                   <th class="col-abo">Croissance</th>
                 </tr>
               </thead>
@@ -512,7 +512,7 @@
   <a href="#">Voir plus <span class="chevron">&#8964;</span></a>
 </section>
 
-      <section class="action" id="contact">
+      <section class="action" >
         <h2>Prêt à naviguer avec certitude ?</h2>
         <p>
           Rejoignez ceux qui nous ont déjà fait confiance pour leur sécurité. Pas
@@ -524,7 +524,7 @@
         </div>
       </section>
 
-      <footer >
+      <footer id="contact" >
         <div class="footer">
           <div class="footer_text">
             <img class="footer_logo"
