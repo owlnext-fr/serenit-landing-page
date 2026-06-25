@@ -802,6 +802,22 @@ section {
     cursor: pointer;
   }
 
+  section {
+  scroll-margin-top: 90px !important;
+}
+
+section.plateforme {
+  scroll-margin-top: 10px !important;
+}
+
+section.prix{
+  scroll-margin-top: 35px !important;
+}
+
+.footer{
+  margin: 50px 0 0px 0 !important;
+}
+
 
 }
 
@@ -810,6 +826,12 @@ section {
 .hero{
   padding: 0 20px;
 }
+
+section {
+  scroll-margin-top: 50px;
+}
+
+
 
 .approche__cards--top {
   display: flex;
@@ -1037,6 +1059,9 @@ section {
     opacity: 0.4 !important;
   }
 
+  .footer{
+  margin: 50px 0 0px 0 !important;
+}
 
 }
 
@@ -1784,6 +1809,7 @@ footer p {
   opacity: 1;
   transform: translateY(0);
 }
+
 .comparison-section.visible {
   opacity: 1;
   transform: translateY(0);
