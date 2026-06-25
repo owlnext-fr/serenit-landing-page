@@ -1013,6 +1013,7 @@ section {
   transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
   will-change: opacity, transform;
   margin: 0 40px;
+  
 }
 
 .clients_cards > div {
@@ -1066,6 +1067,7 @@ section {
   width: 80px;
   height: 80px;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   border-radius: 50px;
@@ -1576,7 +1578,7 @@ body:has(.open)::before {
 }
 
 .clients_card_1{
-  max-width: 250px !important;
+  max-width: 250px !important !important;
 }
 
   section {
@@ -1595,7 +1597,10 @@ section.prix{
   margin: 50px 0 0px 0 !important;
 }
 
-
+.clients_cards{
+  overflow: visible;
+  width: 100% !important;
+}
 
 }
 
@@ -1716,9 +1721,7 @@ section {
   padding: 20px !important;
 }
 
-.clients_card_2{
-  display: none !important;
-}
+
 
 
 
@@ -1788,7 +1791,7 @@ section {
 
 .clients_cards {
   display: flex;
-  justify-content: center !important;
+  justify-content: flex-start !important;
   align-items: center !important;
   gap: 20px !important;
 }
@@ -1857,6 +1860,11 @@ div.container_croissance.active-tab {
 
 .fleche_gauche, .fleche_droite {
   display: none !important;
+}
+
+.clients_cards{
+  overflow: hidden;
+  width: 40%;
 }
 
 }
@@ -1949,5 +1957,18 @@ footer .navigation{
   margin: 0 100px;
   z-index: 1;
 }
+
+
+
+.clients_cards{
+  overflow: hidden;
+  width: 80%;
+}
+
+.clients_cards div {
+  min-width: 350px;
+}
+
+
 
 }
