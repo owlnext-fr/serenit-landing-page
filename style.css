@@ -897,6 +897,7 @@ section {
   width: 60%;
 }
 
+/* Tableau essentiel mobile*/
 .container_essentiel{
   display: flex;
   flex-direction: column;
@@ -945,7 +946,6 @@ section {
   background-color: var(--color-blue-light);
 }
 
-/* Tableau essentiel mobile*/
 .container_essentiel_tableau{
   display: flex;
   flex-direction: column;
