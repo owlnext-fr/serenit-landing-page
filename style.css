@@ -1876,6 +1876,10 @@ div.container_croissance.active-tab {
   flex-shrink: 0;
 }
 
+.solutions_bloc{
+  margin: 0 20px;
+}
+
 }
 
 /* Responsive 1440px */
