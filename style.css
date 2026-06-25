@@ -1403,6 +1403,7 @@ footer p {
   opacity: 1;
   transform: translateY(0);
 }
+
 .comparison-section.visible {
   opacity: 1;
   transform: translateY(0);
@@ -1585,6 +1586,22 @@ body:has(.open)::before {
   margin: 0 20px 10px 20px;
 }
 
+  section {
+  scroll-margin-top: 90px !important;
+}
+
+section.plateforme {
+  scroll-margin-top: 10px !important;
+}
+
+section.prix{
+  scroll-margin-top: 35px !important;
+}
+
+.footer{
+  margin: 50px 0 0px 0 !important;
+}
+
 
 
 }
@@ -1597,6 +1614,10 @@ body:has(.open)::before {
 
 .hero{
   padding: 0 20px;
+}
+
+section {
+  scroll-margin-top: 50px;
 }
 
 .approche__cards--top {
@@ -1635,6 +1656,19 @@ body:has(.open)::before {
   box-shadow: 0 4px 20px rgba(16, 123, 139, 0.03);
 }
 
+.table-container{
+  display: none;
+}
+
+.table-container_essentiel {
+  display: block !important;
+  margin: 0 20px;
+}
+
+.table-container_croissance {
+  display: block !important;
+  margin: 0 20px;
+}
 
 
 .footer_text{
@@ -1819,6 +1853,11 @@ div.container_croissance.active-tab {
   cursor: pointer;
   opacity: 0.4 !important;
 }
+
+  .footer{
+  margin: 50px 0 0px 0 !important;
+}
+
 }
 
 /* Responsive 1440px */
