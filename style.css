@@ -1107,17 +1107,6 @@ section {
   will-change: opacity, transform;
 }
 
-.clients a {
-  text-decoration: none;
-  color: var(--color-text);
-  font-family: var(--font-heading);
-  font-size: var(--body-large);
-  font-weight: 400;
-  margin-top: 30px;
-  text-align: center;
-  display: none;
-}
-
 .clients_card_1 , .clients_card_2 , .clients_card_3  , .clients_card_4{
   display: flex;
   flex-direction: column;
@@ -1586,6 +1575,10 @@ body:has(.open)::before {
   margin: 0 20px 10px 20px;
 }
 
+.clients_card_1{
+  max-width: 250px !important;
+}
+
   section {
   scroll-margin-top: 90px !important;
 }
@@ -1723,6 +1716,12 @@ section {
   padding: 20px !important;
 }
 
+.clients_card_2{
+  display: none !important;
+}
+
+
+
 .action {
   display: flex;
   flex-direction: column;
@@ -1779,10 +1778,6 @@ section {
   padding: 16px 20px !important;
 }
 
-.clients a {
-  display: block !important;
-}
-
 .fleche_client_gauche{
   display: none !important;
 }
@@ -1796,13 +1791,15 @@ section {
   justify-content: center !important;
   align-items: center !important;
   gap: 20px !important;
-  flex-direction: column;
 }
 
 .clients_card_3 , .clients_card_4{
   display: none !important;
 }
 
+.clients_card_1 , .clients_card_2 {
+  min-width: 310px ;
+}
 .table-container{
   display: none !important;
 }
@@ -1863,7 +1860,7 @@ div.container_croissance.active-tab {
 /* Responsive 1440px */
 @media (max-width: 1439px) {
 .navbar-actions .btn.btn--primary{
-  display: none;
+  display: none ;
 }
 
 .navbar-links {
@@ -1894,9 +1891,8 @@ footer .navigation{
 
 
 
-.clients_cards{
-  justify-content: center !important;
-}
+
+
 
 .approche__cards--top {
   display: flex;
