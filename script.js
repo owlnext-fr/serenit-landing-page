@@ -318,3 +318,13 @@ function gererMenu() {
 }
 
 
+const carrousel = document.querySelector(".solutions_carrousel");
+let debutX = 0;
+
+carrousel.addEventListener("touchstart", e => debutX = e.touches[0].clientX);
+carrousel.addEventListener("touchend", e => {
+  const diff = debutX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) < 50) return;
+  document.querySelector(diff > 0 ? ".fleche_droite" : ".fleche_gauche").click();
+});
+

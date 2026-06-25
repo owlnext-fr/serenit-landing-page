@@ -1855,6 +1855,10 @@ div.container_croissance.active-tab {
   margin: 50px 0 0px 0 !important;
 }
 
+.fleche_gauche, .fleche_droite {
+  display: none !important;
+}
+
 }
 
 /* Responsive 1440px */
