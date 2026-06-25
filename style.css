@@ -1016,7 +1016,7 @@ section {
 }
 
 .clients_cards > div {
-  flex: 0 0 calc((100% - 60px) / 3);
+  flex: 0 0 40%;
   box-sizing: border-box;
 }
 
