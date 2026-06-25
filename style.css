@@ -1796,9 +1796,6 @@ section {
   gap: 20px !important;
 }
 
-.clients_card_3 , .clients_card_4{
-  display: none !important;
-}
 
 .clients_card_1 , .clients_card_2 {
   min-width: 310px ;
@@ -1865,6 +1862,18 @@ div.container_croissance.active-tab {
 .clients_cards{
   overflow: hidden;
   width: 40%;
+}
+.clients_cards {
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.clients_cards > div {
+  scroll-snap-align: start;
+  min-width: 80%;
+  flex-shrink: 0;
 }
 
 }
@@ -1968,7 +1977,5 @@ footer .navigation{
 .clients_cards div {
   min-width: 350px;
 }
-
-
 
 }
