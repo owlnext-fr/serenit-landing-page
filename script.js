@@ -264,7 +264,7 @@ if (titreClients) {
 const track = document.querySelector(".clients_cards");
 const items = [...track.children];
 
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 100; i++) {
   items.forEach(item => track.appendChild(item.cloneNode(true)));
 }
 
