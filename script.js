@@ -223,52 +223,57 @@ if (titreClients) {
   }
 
   // Carrousel des avis clients (flèches gauche/droite + gestion du scroll)
-  const conteneurCards = document.querySelector(".clients_cards");
-  const boutonClientDroite = document.querySelector(".fleche_client_droite");
-  const boutonClientGauche = document.querySelector(".fleche_client_gauche");
-  const cartesClients = document.querySelectorAll(".clients_cards > div");
+const conteneurCards = document.querySelector(".clients_cards");
+const boutonClientDroite = document.querySelectorAll(".fleche_client_droite");
+const boutonClientGauche = document.querySelectorAll(".fleche_client_gauche");
+const cartesClients = document.querySelectorAll(".clients_cards > div");
 
-  if (conteneurCards && cartesClients.length > 0) {
-    
-    if (boutonClientGauche) boutonClientGauche.disabled = true;
+if (conteneurCards && cartesClients.length > 0) {
+  let peutCliquer = true;
 
   const largeurUneCarte = cartesClients[0].offsetWidth + 30;
   const largeurDecalage = largeurUneCarte * 2;
 
-    if (boutonClientDroite) {
-      boutonClientDroite.addEventListener("click", () => {
-        conteneurCards.scrollLeft += largeurDecalage;
-      });
-    }
-
-    if (boutonClientGauche) {
-      boutonClientGauche.addEventListener("click", () => {
-        conteneurCards.scrollLeft -= largeurDecalage;
-      });
-    }
-
-    conteneurCards.addEventListener("scroll", () => {
-      if (boutonClientGauche) {
-        boutonClientGauche.disabled = conteneurCards.scrollLeft <= 5;
-      }
+  boutonClientDroite.forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (!peutCliquer) return;
+      peutCliquer = false;
       
-      if (boutonClientDroite) {
-        const maxScroll = conteneurCards.scrollWidth - conteneurCards.clientWidth;
-        boutonClientDroite.disabled = conteneurCards.scrollLeft >= maxScroll - 5;
-      }
+      conteneurCards.scrollLeft += largeurDecalage;
+
+      setTimeout(() => {
+        peutCliquer = true;
+      }, 500);
     });
-  }
+  });
+
+  boutonClientGauche.forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (!peutCliquer) return;
+      peutCliquer = false;
+
+      conteneurCards.scrollLeft -= largeurDecalage;
+
+      setTimeout(() => {
+        peutCliquer = true;
+      }, 2000);
+    });
+  });
+}
 
 
   // Scroll infini avis clients
 const track = document.querySelector(".clients_cards");
 const items = [...track.children];
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 150; i++) {
   items.forEach(item => track.appendChild(item.cloneNode(true)));
 }
 
-track.scrollLeft = track.scrollWidth / 2;
+requestAnimationFrame(() => {
+  track.scrollLeft = track.scrollWidth / 2;
+  majCartesActives();
+});
 
 
 
