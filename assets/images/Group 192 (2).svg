@@ -1,0 +1,20 @@
+<svg width="360" height="667" viewBox="0 0 360 667" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_379_3345)">
+<path d="M381.067 -32C383.078 -34.0506 385.933 -36.3984 388.424 -38.7487C392.214 -42.3247 391.278 -45.2959 389.38 -48.2088C387.752 -50.7059 381.728 -52.314 377.986 -54.085C374.241 -55.8571 370.367 -57.6772 366.094 -59.0185C361.924 -60.3279 357.862 -61.9027 353.852 -63.9714C348.54 -66.7112 344.316 -74.2017 341.072 -79.8748C338.949 -83.5854 338.222 -87.3414 338.035 -98.2298C339.275 -101.935 341.392 -104.247 344.775 -106.769C346.021 -107.608 347.785 -108.772 351.791 -111" stroke="#107B8B" stroke-width="426" stroke-linecap="round"/>
+</g>
+<g filter="url(#filter1_f_379_3345)">
+<path d="M-230.121 382.904C-227.262 382.278 -223.15 381.538 -221.074 381.631C-216.425 381.841 -208.641 386.538 -204.678 388.303C-202.412 389.312 -200.337 390.631 -197.626 392.192C-193.134 394.778 -190.601 398.102 -188.256 400.123C-186.757 401.415 -185.285 402.683 -183.946 403.878C-182.471 405.195 -179.187 407.363 -176.206 409.579C-171.336 413.199 -168.69 414.938 -166.022 417.376C-164.275 418.839 -163.428 419.986 -162.757 420.658C-162.387 421.01 -161.961 421.381 -160.98 422.585" stroke="#70FF82" stroke-width="426" stroke-linecap="round"/>
+</g>
+<defs>
+<filter id="filter0_f_379_3345" x="24.4375" y="-424.039" width="679.598" height="705.039" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_379_3345"/>
+</filter>
+<filter id="filter1_f_379_3345" x="-543.166" y="68.6323" width="695.193" height="666.959" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_379_3345"/>
+</filter>
+</defs>
+</svg>
