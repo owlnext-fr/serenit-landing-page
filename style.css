@@ -1930,13 +1930,13 @@ div.container_croissance.active-tab {
 
 
 .fleches-responsive {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 12px;
-    margin-top: -18px;
-    padding-right: 20px;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: -10x;
+  width: 100%;
+    
   }
 
   .fleches-responsive .fleche_client_gauche,
