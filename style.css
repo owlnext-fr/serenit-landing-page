@@ -494,6 +494,7 @@ section {
   transform: scale(1.2);
 }
 
+
 .solutions_conteneur {
   flex-grow: 1;
   
@@ -1072,6 +1073,9 @@ section {
   transition: transform 0.2s ease;
 }
 
+.fleches-responsive {
+  display: none;
+}
 
 .nom_icone_1 , .nom_icone_2 , .nom_icone_3 , .nom_icone_4{
   background-color: var(--color-border);
@@ -1132,11 +1136,7 @@ section {
   max-width: 350px;
 }
 
-.doubleFleches {
-  display: none;
-  width: 50px;
-  margin: -15px auto 0;
-}
+
 
 .action {
   display: flex;
@@ -1643,6 +1643,17 @@ section.prix{
   transition-delay: 0.2s;
 }
 
+
+.fleches-responsive {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: -18px !important;
+    padding-right: 20px;
+    width: 100%;
+  }
+
 }
 
 /* Responsive 768px */
@@ -1822,13 +1833,6 @@ section {
   padding: 16px 20px !important;
 }
 
-.fleche_client_gauche{
-  display: none !important;
-}
-
-.fleche_client_droite{
-  display: none !important;
-}
 
 .clients_cards {
   display: flex;
@@ -1917,28 +1921,36 @@ div.container_croissance.active-tab {
   flex-shrink: 0;
 }
 
-.doubleFleches {
-    display: block;
-  }
+
 
 .solutions_bloc{
   margin: 0 40px;
 }
 
-.clients_card_1, .clients_card_2, .clients_card_3, .clients_card_4 {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: #ffffff;
-  padding: 40px 25px;
-  border-radius: 15px;
-  border: 2px solid var(--color-border);
-  max-width: 350px;
-  min-height: 380px !important;
-  justify-content: space-between;
-}
 
 
+.fleches-responsive {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: -18px;
+    padding-right: 20px;
+    width: 100%;
+  }
+
+  .fleches-responsive .fleche_client_gauche,
+  .fleches-responsive .fleche_client_droite {
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+
+  .clients > .fleche_client_gauche,
+  .clients > .fleche_client_droite {
+    display: none !important;
+  }
 
 }
 
@@ -2031,8 +2043,6 @@ footer .navigation{
   width: 80%;
 }
 
-.clients_cards div {
-  
-}
+
 
 }
