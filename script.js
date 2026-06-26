@@ -256,7 +256,7 @@ if (conteneurCards && cartesClients.length > 0) {
 
       setTimeout(() => {
         peutCliquer = true;
-      }, 2000);
+      }, 500);
     });
   });
 }
