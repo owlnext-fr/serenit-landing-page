@@ -46,7 +46,7 @@
   --display-1: 64px; /*h1*/
   --display-1-mobile: 40px;
   --display-2: 36px; /*h2*/
-  --display-2-mobile: 34px;
+  --display-2-mobile: 30px;
   --heading-1: 28px; /*h3*/
   --heading-2: 24px; /*h4*/
   --heading-3: 22px; /*h5*/
@@ -230,6 +230,7 @@ section {
 
 .logo-img {
   height: 32px; 
+  margin-top: 5px;
 }
 
 .panel_menu{
@@ -1556,14 +1557,14 @@ body:has(.open)::before {
 }
 
 .hero{
-  background: var(--color-background)  !important;
-  height: 110vh !important;
+  background: url("assets/images/Group\ 192\ \(2\).svg") no-repeat center center !important;
+  background-size: 100% 100% !important;
+  height: 100vh !important;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  margin-top: 20px;
-  padding: 0 20px;
+  
 }
 
 .hero p{
