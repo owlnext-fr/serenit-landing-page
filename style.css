@@ -1039,6 +1039,7 @@ section {
 .clients_cards {
   display: flex;
   justify-content: flex-start; 
+  
   gap: 30px;
   overflow-x: hidden; 
   scroll-behavior: smooth;
@@ -1058,6 +1059,7 @@ section {
     transition: transform 0.3s ease, opacity 0.3s ease;
   transform: scale(0.85);
   opacity: 0.4;
+  min-width: 350px;
   
 }
 
@@ -1124,6 +1126,7 @@ section {
   margin: 0px;
   font-size: var(--body-heading-4);
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .clients_cards p {
@@ -1615,8 +1618,16 @@ body:has(.open)::before {
   margin: 0 20px 10px 20px;
 }
 
-.clients_card_1{
-  max-width: 250px !important;
+
+
+.clients_cards div{
+  max-width: 150px !important;
+}
+.clients_card_1_noms, .clients_card_2_noms, .clients_card_3_noms , .clients_card_4_noms {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
 }
 
   section {
@@ -1642,6 +1653,19 @@ section.prix{
 
 .prix-texte h2{
   margin: 30px 20px 40px !important;
+}
+
+.comparison-section {
+  width: 100% !important;
+  max-width: 940px;
+  margin: -30px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.2s;
 }
 
 }
@@ -2042,7 +2066,7 @@ footer .navigation{
 }
 
 .clients_cards div {
-  min-width: 350px;
+  
 }
 
 }
