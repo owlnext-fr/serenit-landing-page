@@ -488,19 +488,12 @@ section {
 }
 
 .fleche {
-  font-size: 24px;
-  color: var(--color-blue-light);
   cursor: pointer;
-  padding: auto;
   transition: transform 0.2s ease;
   margin: 0 20px 40px 20px;
-  font-size: 24px;
-  color: var(--color-blue-light);
-  border-radius: 50%;
-  border: 0.01px solid var(--color-border);
-  background-color: var(--color-border);
-  width: 30px;
-  height: 30px;
+  border: none;
+  background: none;
+  padding: 0;
 }
 
 .fleche:hover {
@@ -557,9 +550,24 @@ section {
   transition: background-color 0.3s ease;
 }
 
-@keyframes apparitionFluide {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes apparitionGauche {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes apparitionDroite {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes sortieGauche {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(-40px); }
+}
+
+@keyframes sortieDroite {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(40px); }
 }
 
 /* Section Prix */
@@ -1047,6 +1055,15 @@ section {
 .clients_cards > div {
   flex: 0 0 40%;
   box-sizing: border-box;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scale(0.85);
+  opacity: 0.4;
+  
+}
+
+.clients_cards > div.actif {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .clients_card_1_noms, .clients_card_2_noms, .clients_card_3_noms , .clients_card_4_noms {
@@ -1059,18 +1076,10 @@ section {
   position: absolute;
   top: 58%;
   transform: translateY(-50%);
-  font-size: 24px;
-  color: var(--color-blue-light);
   cursor: pointer;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 0.01px solid var(--color-border);
-  background-color: var(--color-border);
-  transition: transform 0.2s ease;
+  border: none;
+  background: none;
+  padding: 0;
   z-index: 10;
 }
 
@@ -1082,13 +1091,12 @@ section {
   right: -60px;
 }
 
-.fleche_client_gauche:hover {
-  transform: translateY(-50%) scale(1.2);
+.fleche_client_gauche:hover,
+.fleche_client_droite:hover {
+  transform: translateY(-50%) scale(1.1);
+  transition: transform 0.2s ease;
 }
 
-.fleche_client_droite:hover {
-  transform: translateY(-50%) scale(1.2);
-}
 
 .nom_icone_1 , .nom_icone_2 , .nom_icone_3 , .nom_icone_4{
   background-color: var(--color-border);
@@ -2017,17 +2025,10 @@ footer .navigation{
   position: absolute;
   top: 58%;
   transform: translateY(-50%);
-  font-size: 24px;
-  color: var(--color-blue-light);
   cursor: pointer;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 0.01px solid var(--color-border);
-  background-color: var(--color-border);
+  border: none;
+  background: none;
+  padding: 0;
   transition: transform 0.2s ease;
   margin: 0 100px;
   z-index: 1;

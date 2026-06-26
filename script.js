@@ -98,15 +98,22 @@ document.addEventListener("DOMContentLoaded", () => {
   let indexActuel = 0;
 
 
-  function changerSolution(nouvelIndex) {
-    listeSolutions[indexActuel].classList.remove("active");
+function changerSolution(nouvelIndex) {
+  const gauche = nouvelIndex > indexActuel;
+  const [ancien, nouveau] = [listeSolutions[indexActuel], listeSolutions[nouvelIndex]];
+
+  ancien.style.animation = `${gauche ? "sortieGauche" : "sortieDroite"} 0.3s ease-out forwards`;
+
+  setTimeout(() => {
+    ancien.classList.remove("active");
     listePoints[indexActuel].classList.remove("point_active");
-
     indexActuel = nouvelIndex;
-
-    listeSolutions[indexActuel].classList.add("active");
+    nouveau.classList.add("active");
+    nouveau.offsetHeight;
+    nouveau.style.animation = `${gauche ? "apparitionGauche" : "apparitionDroite"} 0.3s ease-out forwards`;
     listePoints[indexActuel].classList.add("point_active");
-  }
+  }, 300);
+}
 
   listePoints.forEach((point, index) => {
     point.addEventListener("click", () => {
@@ -251,6 +258,40 @@ if (titreClients) {
       }
     });
   }
+
+
+  // Scroll infini avis clients
+const track = document.querySelector(".clients_cards");
+const items = [...track.children];
+
+for (let i = 0; i < 50; i++) {
+  items.forEach(item => track.appendChild(item.cloneNode(true)));
+}
+
+track.scrollLeft = track.scrollWidth / 2;
+
+
+
+
+// Caches les avis pas dans le cadre (opacité + plus petites)
+function majCartesActives() {
+  const centreTrack = track.scrollLeft + track.clientWidth / 2;
+  const cartes = track.querySelectorAll(".clients_cards > div");
+  
+  cartes.forEach(carte => {
+    const centreCarte = carte.offsetLeft + carte.offsetWidth / 2;
+    const distance = Math.abs(centreTrack - centreCarte);
+    
+    if (distance < carte.offsetWidth * 1.5) {
+      carte.classList.add("actif");
+    } else {
+      carte.classList.remove("actif");
+    }
+  });
+}
+
+track.addEventListener("scroll", majCartesActives);
+majCartesActives();
 
 
 // Animation au scroll de la section action
