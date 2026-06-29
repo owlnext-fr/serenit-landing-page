@@ -232,8 +232,7 @@ if (conteneurCards && cartesClients.length > 0) {
   let peutCliquer = true;
 
   const largeurUneCarte = cartesClients[0].offsetWidth + 30;
-  const largeurDecalage = largeurUneCarte * 2;
-
+  const largeurDecalage = window.innerWidth <= 960 ? largeurUneCarte : largeurUneCarte * 2;
   boutonClientDroite.forEach(btn => {
     btn.addEventListener("click", () => {
       if (!peutCliquer) return;

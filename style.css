@@ -1649,7 +1649,7 @@ section.prix{
     justify-content: flex-end;
     align-items: center;
     gap: 12px;
-    margin-top: -18px !important;
+    margin-top: -10px !important;
     padding-right: 20px;
     width: 100%;
   }
@@ -1773,8 +1773,21 @@ section {
   padding: 20px !important;
 }
 
+.clients_cards {
+    width: 100% !important;
+    overflow-x: auto !important; 
+    justify-content: flex-start !important; 
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    
+  }
 
-
+.clients_cards > div {
+  scroll-snap-align: start !important;
+  min-width: 80% !important;
+  flex-shrink: 0;
+}
 
 
 .action {
@@ -1913,11 +1926,12 @@ div.container_croissance.active-tab {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  align-items: stretch !important;
 }
 
 .clients_cards > div {
   scroll-snap-align: start;
-  min-width: 80%;
+  min-width: 80% !important;
   flex-shrink: 0;
 }
 
