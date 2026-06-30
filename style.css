@@ -193,7 +193,7 @@ section {
 .navbar-links a:hover {
   color: var(--color-blue-light);        
   font-weight: 700;     
-  border-bottom: 2px solid var(--color-blue-light); 
+  border-bottom: 2px solid transparent; 
 }
 
 .navbar-actions {
@@ -265,6 +265,7 @@ section {
 }
 
 .panel_menu span{
+  font-size: var(--heading-3);
   border: 2px solid var(--color-blue-light);
   border-radius: 40px;
   padding: 5px 13px;
@@ -1469,12 +1470,17 @@ body:has(.open)::before {
 
 /* Responsive 455px */
 @media (max-width: 455px) {
+  
 .hero h1 {
   font-family: var(--font-heading);
   font-size: var(--display-1-mobile);
   font-weight: 400;
   color: var(--color-text);
   margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: var(--body-large) !important;
 }
 
 .plateforme h2 {
@@ -1561,6 +1567,7 @@ body:has(.open)::before {
   display: flex;
   flex-direction: column;
   margin-bottom: 80px;
+  margin-top: 40px !important;
 }
 
 .approche__cards--top {
@@ -1614,7 +1621,7 @@ section.plateforme {
 }
 
 section.prix{
-  scroll-margin-top: 35px !important;
+  scroll-margin-top: 10px !important;
 }
 
 .footer{
@@ -1644,15 +1651,13 @@ section.prix{
 }
 
 
-.fleches-responsive {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 12px;
-    margin-top: -10px !important;
-    padding-right: 20px;
-    width: 100%;
-  }
+
+.clients_cards {
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 20px !important;
+}
 
 }
 
@@ -1774,13 +1779,10 @@ section {
 }
 
 .clients_cards {
-    width: 100% !important;
-    overflow-x: auto !important; 
-    justify-content: flex-start !important; 
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
-    
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 20px !important; 
   }
 
 .clients_cards > div {
@@ -1788,6 +1790,8 @@ section {
   min-width: 80% !important;
   flex-shrink: 0;
 }
+
+
 
 
 .action {
@@ -1814,6 +1818,7 @@ section {
   margin: 0;
 }
 
+
 .card-free {
   min-height: auto !important;
 }
@@ -1821,6 +1826,48 @@ section {
 .card-free p{
   margin: 0 0 40px 0;
 }
+}
+
+@media (max-width: 630px){
+.fleches-responsive {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin-top: 25px !important;
+    margin-bottom: 15px !important;
+    position: static !important;
+  }
+
+  .clients {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .clients_cards {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .fleche_gauche, .fleche_droite {
+  display: none !important;
+}
+
+
+
 }
 
 /* Responsive 960px */
@@ -1846,6 +1893,10 @@ section {
   padding: 16px 20px !important;
 }
 
+
+.card-free {
+  min-height: auto !important;
+}
 
 .clients_cards {
   display: flex;
@@ -1913,9 +1964,7 @@ div.container_croissance.active-tab {
   margin: 50px 0 0px 0 !important;
 }
 
-.fleche_gauche, .fleche_droite {
-  display: none !important;
-}
+
 
 .clients_cards{
   overflow: hidden;
@@ -1935,7 +1984,11 @@ div.container_croissance.active-tab {
   flex-shrink: 0;
 }
 
-
+.fleche_gauche img,
+.fleche_droite img {
+  width: 24px;
+  height: 24px;
+}
 
 .solutions_bloc{
   margin: 0 40px;
@@ -1945,13 +1998,14 @@ div.container_croissance.active-tab {
 
 .fleches-responsive {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  margin-top: -10x;
   width: 100%;
-    
-  }
+  padding: 0 20px;
+  position: absolute;
+  top: 58%;
+  transform: translateY(-50%);
+}
 
   .fleches-responsive .fleche_client_gauche,
   .fleches-responsive .fleche_client_droite {
@@ -1965,6 +2019,11 @@ div.container_croissance.active-tab {
   .clients > .fleche_client_droite {
     display: none !important;
   }
+  
+  .nom_icone_1, .nom_icone_2, .nom_icone_3, .nom_icone_4 {
+  display: none !important;
+}
+
 
 }
 
