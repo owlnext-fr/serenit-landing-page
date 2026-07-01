@@ -42,16 +42,32 @@
   --font-body: 'Inter', sans-serif;
 
   --display-1: 64px; /*h1*/
-  --display-1-mobile: 44px;
+  --display-1-mobile: 36px;
+  
   --display-2: 36px; /*h2*/
-  --display-2-mobile: 30px;
+  --display-2-mobile: 28px;
+  
   --heading-1: 28px; /*h3*/
+  --heading-1-mobile: 26px;
+
   --heading-2: 24px; /*h4*/
+  --heading-2-mobile: 22px;
+
   --heading-3: 22px; /*h5*/
+  --heading-3-mobile: 20px;
+
   --heading-4: 20px; /*h6*/
+  --heading-4-mobile: 18px;
+
   --body-large: 16px;
+  --body-large-mobile: 14px;
+
   --body-medium: 14px;
+  --body-medium-mobile: 12px;
+
   --body-small: 12px;
+  --body-small-mobile: 10px;
+  
   /* --- Couleurs ---
      Relevez les codes hex depuis Figma (panneau de droite > Fill).
      Exemple de nommage : */
@@ -125,8 +141,6 @@ body:has(.open) {
   overflow: hidden; 
 }
 
-
-
 .ci-status {
   font-size: 0.9rem;
   color: #F8FBFF;
@@ -135,8 +149,6 @@ body:has(.open) {
 section {
   scroll-margin-top: 50px;
 }
-
-/*Dino Navbar */
 
 /*  Navbar  */
 .fond-navbar {
@@ -325,6 +337,9 @@ transition: all 0.2s ease;
   text-align: center;
   justify-content: center;
   margin-top: -100px;
+  padding-bottom: 20px !important; 
+  margin-bottom: -317px !important;
+  
 }
 
 .hero_text {
@@ -610,9 +625,6 @@ transition: all 0.2s ease;
   gap: 50px;
 }
 
-
-
-
 .card-free, .card-essentiel, .card-croissance {
   background-color: #ffffff;
   border-radius: 16px;
@@ -738,10 +750,6 @@ transition: all 0.2s ease;
   width: 100%;
 }
 
-.btn-card:hover{
-  border: 2px solid var(--color-hover-primary);
-  color: var(--color-hover-primary);
-}
 
 .card-free .btn-card {
   color: var(--color-text-description);
@@ -754,7 +762,10 @@ transition: all 0.2s ease;
   width: 100%;
 }
 
-
+.btn-card:hover{
+  border: 2px solid var(--color-hover-primary);
+  color: var(--color-hover-primary);
+}
 
 /*  Tableau comparaison  */
 .comparison-section {
@@ -779,8 +790,6 @@ transition: all 0.2s ease;
   padding: 40px 48px;     
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
 }
-
-
 
 .comparison-table {
   width: 100%;
@@ -1140,8 +1149,6 @@ transition: all 0.2s ease;
   max-width: 350px;
 }
 
-
-
 .action {
   display: flex;
   flex-direction: column;
@@ -1285,8 +1292,6 @@ footer p {
   flex-direction: row;
   gap: 160px;
 }
-
-
 
 .contact_text{
   display: flex;
@@ -1469,11 +1474,41 @@ body:has(.open)::before {
   visibility: visible;
 }
 
-
-
 /* Responsive 455px */
 @media (max-width: 455px) {
-  
+
+.navbar-links a {
+  font-size: var(--body-large-mobile);
+}
+
+.navbar a {
+  font-size: var(--body-large-mobile);
+}
+
+.navbar-actions .btn-login,
+.btn.btn--primary,
+.btn.btn--secondary,
+.btn.btn--primary-inverse {
+  font-size: var(--body-large-mobile);
+}
+
+.panel_menu h2,
+.panel_menu span {
+  font-size: var(--display-2-mobile);
+}
+
+.panel_menu span {
+  font-size: var(--heading-3-mobile);
+}
+
+.panel-links a {
+  font-size: var(--heading-3-mobile);
+}
+
+.panel_menu .btn-login {
+  font-size: var(--body-large-mobile);
+}
+
 .hero h1 {
   font-family: var(--font-heading);
   font-size: var(--display-1-mobile);
@@ -1483,7 +1518,7 @@ body:has(.open)::before {
 }
 
 .hero p {
-  font-size: var(--body-large) !important;
+  font-size: var(--body-large-mobile) !important;
 }
 
 .plateforme h2 {
@@ -1495,13 +1530,34 @@ body:has(.open)::before {
 }
 
 .plateforme h3 {
-  font-size: var(--heading-4);
+  font-size: var(--heading-4-mobile);
   color: var(--color-text);
   margin: 0px;
 }
 
+.plateforme h5,
+.solutions h5 {
+  font-size: var(--heading-3-mobile);
+}
+
+.plateforme p {
+  font-size: var(--body-large-mobile);
+}
+
+.badge {
+  font-size: var(--body-medium-mobile) !important;
+}
+
+.solutions_text h3 {
+  font-size: var(--heading-1-mobile);
+}
+
+.solutions_text__description {
+  font-size: var(--body-large-mobile);
+}
+
 .card-description {
-    font-size: var(--heading-4);
+    font-size: var(--heading-4-mobile);
     color: var(--color-text-description);
     margin: 0 0 24px 0;
     line-height: 1.4;
@@ -1518,15 +1574,19 @@ body:has(.open)::before {
   margin: 0;
 }
 
+.form-txt {
+  font-size: var(--heading-3-mobile);
+}
+
 .prix-cards h3 {
   font-family: var(--font-body);
-  font-size: var(--heading-2);
+  font-size: var(--heading-2-mobile);
   color: var(--color-text);
   margin: 0 0 12px 0;
 }
 
 .card-essentiel .prix-somme {
-  font-size: var(--heading-2);
+  font-size: var(--heading-2-mobile);
   font-weight: bold;
   color: var(--color-blue-light);
   font-family: var(--font-body);
@@ -1534,11 +1594,38 @@ body:has(.open)::before {
 }
 
 .card-croissance .prix-somme {
-  font-size: var(--heading-2);
+  font-size: var(--heading-2-mobile);
   font-weight: bold;
   color: var(--color-prix-c);
   font-family: var(--font-body);
   letter-spacing:1px;
+}
+
+.card-prix .prix-periode {
+  font-size: var(--heading-4-mobile);
+}
+
+.card-info li {
+  font-size: var(--body-large-mobile);
+}
+
+.btn-card {
+  font-size: var(--body-large-mobile);
+}
+
+.comparison-table th,
+.comparison-table td {
+  font-size: var(--body-large-mobile);
+}
+
+.container_essentiel h6,
+.container_croissance h6 {
+  font-size: var(--heading-4-mobile);
+}
+
+.container_essentiel_ligne p,
+.container_croissance_ligne p {
+  font-size: var(--body-large-mobile);
 }
 
 .clients h2{
@@ -1552,7 +1639,15 @@ body:has(.open)::before {
 
 .clients_cards h3 {
   margin: 0px;
-  font-size: var(--heading-2);
+  font-size: var(--heading-2-mobile);
+}
+
+.clients_cards h6 {
+  font-size: var(--body-medium-mobile);
+}
+
+.clients_cards p {
+  font-size: var(--body-large-mobile);
 }
 
 .action h2 {
@@ -1563,6 +1658,24 @@ body:has(.open)::before {
   font-weight: 400;
   color: var(--color-text);
   margin: 0;
+}
+
+.action p {
+  font-size: var(--body-large-mobile);
+}
+
+.btn.btn--secondary,
+.action .btn.btn--primary {
+  font-size: var(--body-large-mobile);
+}
+
+footer h5 {
+  font-size: var(--heading-3-mobile);
+}
+
+footer p,
+footer a {
+  font-size: var(--body-large-mobile);
 }
 
 .hero{
@@ -1613,7 +1726,9 @@ body:has(.open)::before {
   margin: 0 20px 10px 20px;
 }
 
-
+.solutions_carrousel > div {
+  min-height: 230px !important;
+}
 
 .clients_cards div{
   max-width: 150px !important;
@@ -1663,8 +1778,6 @@ section.prix{
   transition-delay: 0.2s;
 }
 
-
-
 .clients_cards {
   display: flex;
   justify-content: flex-start !important;
@@ -1672,6 +1785,25 @@ section.prix{
   gap: 20px !important;
 }
 
+  .hero{
+    padding-bottom: 20px !important; 
+    margin-bottom: -129px !important;
+  }
+
+}
+
+@media (max-width: 960px) and (min-width: 456px) {
+  body, .hero {
+    background-image: url('./assets/images/Background\ tablette.svg') !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% auto !important; 
+  }
+
+  .hero{
+    padding-bottom: 20px !important; 
+    margin-bottom: -317px !important;
+  }
 }
 
 /* Responsive 768px */
@@ -1738,6 +1870,19 @@ section {
   margin: 0 20px;
 }
 
+div.container_essentiel{
+  display: none !important;
+}
+div.container_croissance {
+  display: none !important; 
+}
+
+div.container_essentiel.active-tab{
+  display: block !important;
+}
+div.container_croissance.active-tab {
+  display: block !important;
+}
 
 .footer_text{
   display: flex;
@@ -1804,9 +1949,6 @@ section {
   flex-shrink: 0;
 }
 
-
-
-
 .action {
   display: flex;
   flex-direction: column;
@@ -1839,6 +1981,7 @@ section {
 .card-free p{
   margin: 0 0 40px 0;
 }
+
 }
 
 @media (max-width: 630px){
@@ -1878,8 +2021,6 @@ section {
   .fleche_gauche, .fleche_droite {
   display: none !important;
 }
-
-
 
 }
 
@@ -1922,9 +2063,7 @@ section {
 .clients_card_1 , .clients_card_2 {
   min-width: 310px ;
 }
-.table-container{
-  display: none !important;
-}
+
 
 .container_essentiel {
   margin: 0 20px;
@@ -1954,20 +2093,6 @@ section {
   cursor: pointer;
 }
 
-div.container_essentiel{
-  display: none !important;
-}
-div.container_croissance {
-  display: none !important; 
-}
-
-div.container_essentiel.active-tab{
-  display: block !important;
-}
-div.container_croissance.active-tab {
-  display: block !important;
-}
-
 .container_croissance .container_essentiel h6[onclick] {
   cursor: pointer;
   opacity: 0.4 !important;
@@ -1976,8 +2101,6 @@ div.container_croissance.active-tab {
   .footer{
   margin: 50px 0 0px 0 !important;
 }
-
-
 
 .clients_cards{
   overflow: hidden;
@@ -2006,8 +2129,6 @@ div.container_croissance.active-tab {
 .solutions_bloc{
   margin: 0 40px;
 }
-
-
 
 .fleches-responsive {
   display: flex;
@@ -2072,11 +2193,6 @@ footer .navigation{
   gap: 50px !important;
 }
 
-
-
-
-
-
 .approche__cards--top {
   display: flex;
   justify-content: center;
@@ -2122,13 +2238,9 @@ footer .navigation{
   z-index: 1;
 }
 
-
-
 .clients_cards{
   overflow: hidden;
   width: 80%;
 }
-
-
 
 }
