@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const optionRadar = {
     root: null,
-    rootMargin: "-20% 0px -10% 0px"
+    rootMargin: "-20% 0px -25% 0px"
   };
 
   const espionScroll = new IntersectionObserver((entries) => {
