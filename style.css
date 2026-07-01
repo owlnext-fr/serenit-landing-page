@@ -302,7 +302,7 @@ section {
 .panel-links a{
   text-decoration: none;
   color: var(--color-blue-light);
-  font-size: var(--heading-3);
+  font-size: var(--heading-4);
   font-weight: bold;
   padding-bottom: 4px;
   border-bottom: 2px solid transparent; 
@@ -1502,7 +1502,7 @@ body:has(.open)::before {
 }
 
 .panel-links a {
-  font-size: var(--heading-3-mobile);
+  font-size: var(--heading-4-mobile);
 }
 
 .panel_menu .btn-login {
@@ -1827,7 +1827,7 @@ section {
   text-align: start;
   gap: 30px;
   flex-direction: column;
-  margin: 0 50px 40px 50px !important;
+  margin: 0 50px 30px 50px !important;
 }
 
 .approche__cards--bottom {

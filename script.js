@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const optionRadar = {
     root: null,
-    rootMargin: "-20% 0px -25% 0px"
+    rootMargin: "-50% 0px -27% 0px"
   };
 
   const espionScroll = new IntersectionObserver((entries) => {
@@ -99,7 +99,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function changerSolution(nouvelIndex) {
-  const gauche = nouvelIndex > indexActuel;
+  const total = listeSolutions.length;
+  const boucleGauche = (indexActuel === total - 1 && nouvelIndex === 0);
+  const boucleDroite = (indexActuel === 0 && nouvelIndex === total - 1);
+  
+  let gauche;
+  if (boucleGauche) gauche = true;
+  else if (boucleDroite) gauche = false;
+  else gauche = nouvelIndex > indexActuel;
+
   const [ancien, nouveau] = [listeSolutions[indexActuel], listeSolutions[nouvelIndex]];
 
   ancien.style.animation = `${gauche ? "sortieGauche" : "sortieDroite"} 0.3s ease-out forwards`;
