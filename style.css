@@ -2048,6 +2048,7 @@ div.container_croissance.active-tab {
 
 .btn-menu{
   display: block;
+  font-size: var(--body-small-mobile) !important;
 }
 
 .navbar{
