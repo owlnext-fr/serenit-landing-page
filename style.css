@@ -1494,7 +1494,7 @@ body:has(.open)::before {
 
 .panel_menu h2,
 .panel_menu span {
-  font-size: var(--display-2-mobile);
+  font-size: var(--heading-1-mobile);
 }
 
 .panel_menu span {
@@ -1793,16 +1793,23 @@ section.prix{
 }
 
 @media (max-width: 960px) and (min-width: 456px) {
-  body, .hero {
-    background-image: url('./assets/images/Background\ tablette.svg') !important;
-    background-position: top center !important;
-    background-repeat: no-repeat !important;
-    background-size: 100% auto !important; 
+  .hero {
+    background: url("assets/images/Background\ tablette.svg") no-repeat center top !important;
+    background-size: 100% !important;
+    height: auto !important;
+    min-height: 2000px !important;
+    display: block !important;
+    text-align: center !important;
+    padding-top: 280px !important;    
+    padding-bottom: 0px !important;   
+    margin-bottom: 0 !important;
+    overflow: hidden !important;
+    width: 100% !important;
   }
 
-  .hero{
-    padding-bottom: 20px !important; 
-    margin-bottom: -317px !important;
+  .plateforme {
+    margin-top: -1111px !important;
+    padding-top: 0px !important;
   }
 }
 
